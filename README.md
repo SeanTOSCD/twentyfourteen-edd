@@ -16,4 +16,4 @@ An Easy Digital Downloads ready child theme for WordPress' Twenty Fourteen theme
 
 ![Checkout](http://seandavis.co/wp-content/uploads/2014/02/checkout.png "Checkout")
 
-![Customizer](http://seandavis.co/wp-content/uploads/2014/02/checkout.png "Customizer")
+![Customizer](http://seandavis.co/wp-content/uploads/2014/02/customizer.png "Customizer")

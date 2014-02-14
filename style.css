@@ -1,0 +1,261 @@
+/*
+Theme Name: Twenty Fourteen - EDD
+Theme URI: https://easydigitaldownloads.com/
+Author: Sean Davis
+Author URI: http://seandavis.co
+Description: the 2014 default WordPress theme lets you create a responsive magazine website with a sleek, modern design. Feature your favorite homepage content in either a grid or a slider. Use the three widget areas to customize your website, and change your content's layout with a full-width page template and a contributor page to show off your authors. Creating a magazine website with WordPress has never been easier. This child theme extends that funtionality to fully integrate Easy Digital Downloads, the world's easiest way to sell digital downloads through WordPress
+for free.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: black, green, white, light, dark, two-columns, three-columns, left-sidebar, right-sidebar, fixed-layout, responsive-layout, custom-background, custom-header, custom-menu, editor-style, featured-images, flexible-header, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready, accessibility-ready
+Text Domain: tfedd
+Template: twentyfourteen
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+@import url('../twentyfourteen/style.css');
+
+
+/*:-----[ Formatting ]-----:*/
+
+.clear-tfedd:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+.edd-submit.button.green,
+.edd-submit.button.blue,
+.view-details,
+#edd-purchase-button, 
+.edd-submit, 
+input[type=submit].edd-submit,
+#edd_profile_editor_submit {
+	background: #fff;
+	color: #24890D;
+	padding: 6px 8px;
+	border: 1px solid #24890D;
+	border-radius: 0;
+}
+.edd-submit.button.green:hover,
+.edd-submit.button.blue:hover,
+.view-details:hover,
+#edd-purchase-button:hover, 
+.edd-submit:hover, 
+input[type=submit].edd-submit:hover,
+#edd_profile_editor_submit:hover {
+	background: #fff;
+	color: #BBB;
+	border: 1px solid #DDD;
+}
+.edd_errors {
+	border-radius: 0;
+}
+#edd_checkout_cart a.edd-cart-saving-button {
+	border: none;
+	padding: 0;
+}
+
+
+/*:-----[ EDD pages ]-----:*/
+
+#edd_checkout_cart .edd_cart_header_row th,
+#edd_user_history th {
+	background: #000;
+	color: #fff;
+}
+#edd_checkout_cart td, 
+#edd_checkout_cart th,
+#edd_user_history,
+#edd_user_history th,
+#edd_user_history td,
+table, th, td {
+	border-color: #000;
+}
+#edd_checkout_cart .edd_cart_item_name, 
+#edd_checkout_cart .edd_cart_item_price {
+	border-right: none;
+	border-bottom: none;
+}
+#edd_checkout_cart .edd_cart_actions,
+#edd_checkout_cart .edd_cart_footer_row:not(:last-child) th {
+	border-bottom: none;
+}
+#edd_checkout_form_wrap,
+#edd_profile_editor_form {
+	margin: 3em auto;
+	max-width: 600px;
+}
+#edd_checkout_form_wrap fieldset,
+#edd_profile_editor_form fieldset {
+	padding-right: 0;
+	padding-left: 0;
+	border: none;
+}
+#edd_user_history th {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+#edd_profile_editor_form input,
+#edd_profile_editor_form select {
+	margin-bottom: 12px;
+}
+#edd_profile_name_label,
+#edd_profile_billing_address_label,
+#edd_profile_password_label {
+	display: block;
+	font-weight: bold;
+	padding-bottom: 10px;
+	border-bottom: 3px solid #eee;
+	margin-bottom: 20px;
+}
+#edd_profile_editor_form .edd_password_change_notice {
+	background: #FAFAFA;
+	color: #666;
+	padding: .5em 1.387em;
+	border: 1px solid #EEE;
+	margin-bottom: 20px;
+}
+
+
+/*:-----[ EDD sidebar ]-----:*/
+
+#content-sidebar .edd_price_options li {
+	margin-bottom: 10px;
+}
+
+
+/*:-----[ EDD layouts ]-----:*/
+
+.store-front-template .site-content,
+.edd-template .site-content,
+.tax-download_tag .site-content,
+.tax-download_category .site-content {
+	margin-right: 48px;
+	margin-left: 270px;
+}
+.edd-template .hentry,
+.edd-template .site-content .entry-header, 
+.edd-template .site-content .entry-content, 
+.edd-template .site-content .entry-summary, 
+.edd-template .site-content .entry-meta, 
+.edd-template .page-content {
+	padding-right: 0;
+	padding-left: 0;
+	margin-right: 0;
+	max-width: 100%;
+}
+.threecol.product {
+	float: left;
+	width: 282px;
+	margin: 0 48px 48px 0;
+}	
+.threecol.product:nth-child(3n+3) {
+	margin-right: 0;
+}
+.product-title h3 {
+	margin-top: 15px;
+}
+.store-title {
+	font-size: 33px;
+	font-weight: 300;
+	line-height: 1.0909090909;
+	margin-bottom: 12px;
+	margin: 0 0 12px 0;
+	text-transform: uppercase;
+}
+.store-pagination {
+	margin-bottom: 30px;
+}
+.store-pagination > a,  .store-pagination > span {
+	display: inline-block;
+	padding: 2px 6px;
+	border: 1px solid #93B18C;
+	margin-right: 5px;
+}
+.store-pagination > span {
+	color: #bbb;
+}
+.store-pagination > span,
+.store-pagination > a:hover {
+	color: #BBB;
+	border: 1px solid #ddd;
+}
+
+/*:-----[ Responsive adjustments ]-----:*/
+
+@media screen and (max-width: 1260px) {
+	.threecol.product {
+		width: 29.936305732484%;
+		margin: 0 5.095541401274% 5.095541401274% 0;
+	}
+}
+
+@media screen and (max-width: 1080px) {
+	.store-front-template .site-content,
+	.edd-template .site-content,
+	.tax-download_tag .site-content,
+	.tax-download_category .site-content {
+		margin-left: 230px;
+	}
+}
+
+@media screen and (max-width: 1008px) {
+	.store-front-template .site-content,
+	.edd-template .site-content,
+	.tax-download_tag .site-content,
+	.tax-download_category .site-content {
+		margin: 0 30px 30px;
+	}
+}
+
+@media screen and (max-width: 845px) {
+	.threecol.product {
+		float: left;
+		width: 46.8%;
+		margin: 0 6% 48px 0;
+	}
+	.threecol.product:nth-child(3n+3) {
+		margin-right: 6%;
+	}
+	.threecol.product:nth-child(even) {
+		margin-right: 0;
+	}
+}
+
+@media screen and (max-width: 672px) {
+	.store-front-template .site-content {
+		margin: 0 10px 48px;
+	}
+}
+
+@media screen and (max-width: 540px) {
+	.threecol.product {
+		float: none;
+		width: 100%;
+		margin: 0 0 30px 0;
+	}
+	.threecol.product:nth-child(3n+3) {
+		margin-right: 0;
+	}
+	#edd_checkout_cart td, 
+	#edd_checkout_cart th,
+	#edd_user_history {
+		font-size: 12px;
+	}
+	#edd_checkout_cart td, 
+	#edd_checkout_cart th {
+		padding: 10px;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.store-info {
+		margin-top: 30px;
+	}
+}

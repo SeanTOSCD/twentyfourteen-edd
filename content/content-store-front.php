@@ -4,7 +4,8 @@
  * all changes made here should also be made to the download taxonomy template
  * found at - content/content-download-taxonomy.php
  */
-$current_page = get_query_var( 'paged' );
+$store_page_setting = (is_front_page() && is_page_template('page-templates/edd-store-front.php') ? 'page' : 'paged' );
+$current_page = get_query_var( $store_page_setting );
 $per_page = intval( get_theme_mod( 'tfedd_store_front_count' ) );
 $offset = $current_page > 0 ? $per_page * ( $current_page-1 ) : 0;
 $product_args = array(

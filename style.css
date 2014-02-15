@@ -13,9 +13,13 @@ Text Domain: tfedd
 Template: twentyfourteen
 
 This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned with others.
+
+Literally take it and make it your own. This is already a child theme so all
+tweaks belong here. Take it and do whatever you want to it. You can always get
+the original version from here. https://github.com/sdavis2702/twentyfourteen-edd
 */
 
+/* import Twenty Fourteen stylesheet */
 @import url('../twentyfourteen/style.css');
 
 
@@ -30,7 +34,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	height: 0;
 }
 .edd-submit.button.green,
-.edd-submit.button.blue,
+.edd-submit.button.blue, /* override default blue EDD buttons too */
 .view-details,
 #edd-purchase-button, 
 .edd-submit, 

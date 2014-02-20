@@ -22,7 +22,7 @@ Store Front page template
 
 Checkout page template (additional page templates included)
 
-![Checkout](http://seandavis.co/wp-content/uploads/2014/02/checkout.png "Checkout")
+![Checkout](http://seandavis.co/wp-content/uploads/2014/02/checkout-demo.png "Checkout")
 
 Additional customizer options for store front/download archives customization
 

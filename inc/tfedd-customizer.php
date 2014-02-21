@@ -77,9 +77,9 @@ add_action( 'customize_register', 'tfedd_customize_register' );
 /** ===============
  * Add Customizer UI styles to the <head> only on Customizer page
  */
-function sdm_customizer_styles() { ?>
+function tfedd_customizer_styles() { ?>
 	<style type="text/css">
 		#customize-control-tfedd_store_front_count input[type="text"] { width: 50px; }
 	</style>
 <?php }
-add_action('customize_controls_print_styles', 'sdm_customizer_styles');
+add_action('customize_controls_print_styles', 'tfedd_customizer_styles');

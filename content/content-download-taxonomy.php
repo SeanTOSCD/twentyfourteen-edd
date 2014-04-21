@@ -10,27 +10,29 @@
 	<div id="primary" class="content-area">
 		<div id="content" class="site-content" role="main">
 		<?php if ( have_posts() ) : $i = 1; ?>
-			<div class="store-info">
-				<?php if ( get_theme_mod( 'tfedd_edd_store_archives_title' ) ) : ?>
-					<h1 class="store-title"><?php echo get_theme_mod( 'tfedd_edd_store_archives_title' ); ?></h1>
-				<?php endif; ?>
-				<?php if ( get_theme_mod( 'tfedd_edd_store_archives_description' ) ) : ?>
-					<div class="store-description">
-						<?php echo wpautop( get_theme_mod( 'tfedd_edd_store_archives_description' ) ); ?>
-					</div>
-				<?php endif; ?>
-			</div>
+			<?php if ( get_theme_mod( 'tfedd_edd_store_archives_title' ) || get_theme_mod( 'tfedd_edd_store_archives_description' ) ) : ?>
+				<div class="store-info">
+					<?php if ( get_theme_mod( 'tfedd_edd_store_archives_title' ) ) : ?>
+						<h1 class="store-title"><?php echo get_theme_mod( 'tfedd_edd_store_archives_title' ); ?></h1>
+					<?php endif; ?>
+					<?php if ( get_theme_mod( 'tfedd_edd_store_archives_description' ) ) : ?>
+						<div class="store-description">
+							<?php echo wpautop( get_theme_mod( 'tfedd_edd_store_archives_description' ) ); ?>
+						</div>
+					<?php endif; ?>
+				</div>
+			<?php endif; ?>
 			<div id="store-grid" class="store-front clear-tfedd">
 				<?php while ( have_posts() ) : the_post(); ?>
 					
 					<div class="threecol product">
-						<div class="product-image">
-							<?php if ( has_post_thumbnail() ) { ?>
+						<?php if ( has_post_thumbnail() ) { ?>
+							<div class="product-image">
 								<a href="<?php the_permalink(); ?>">
 									<?php the_post_thumbnail( 'product-img' ); ?>
 								</a>
-							<?php } ?>
-						</div>
+							</div>
+						<?php } ?>
 						<div class="product-description">
 							<a class="product-title" href="<?php the_permalink(); ?>">
 								<h3><?php the_title(); ?></h3>

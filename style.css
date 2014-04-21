@@ -1,10 +1,9 @@
 /*
 Theme Name: Twenty Fourteen - EDD
-Theme URI: https://github.com/sdavis2702/twentyfourteen-edd
+Theme URI: http://buildwpyourself.com/downloads/twenty-fourteen-easy-digital-downloads/
 Author: Sean Davis
 Author URI: http://seandavis.co
-Description: the 2014 default WordPress theme lets you create a responsive magazine website with a sleek, modern design. Feature your favorite homepage content in either a grid or a slider. Use the three widget areas to customize your website, and change your content's layout with a full-width page template and a contributor page to show off your authors. Creating a magazine website with WordPress has never been easier. This child theme extends that funtionality to fully integrate Easy Digital Downloads, the world's easiest way to sell digital downloads through WordPress
-for free.
+Description: This child theme extends that functionality of Twenty Fourteen to fully integrate Easy Digital Downloads, the world's easiest way to sell digital downloads for free through WordPress.
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -13,7 +12,6 @@ Text Domain: tfedd
 Template: twentyfourteen
 
 This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned with others.
 */
 
 @import url('../twentyfourteen/style.css');
@@ -151,9 +149,10 @@ table, th, td {
 	max-width: 100%;
 }
 .threecol.product {
-	float: left;
+	display: inline-block;
 	width: 282px;
-	margin: 0 48px 48px 0;
+	margin: 0 44px 48px 0;
+	vertical-align: top;
 }	
 .threecol.product:nth-child(3n+3) {
 	margin-right: 0;
@@ -192,7 +191,7 @@ table, th, td {
 @media screen and (max-width: 1260px) {
 	.threecol.product {
 		width: 29.936305732484%;
-		margin: 0 5.095541401274% 5.095541401274% 0;
+		margin: 0 4.670912951168% 4.670912951168% 0;
 	}
 }
 
@@ -261,7 +260,8 @@ table, th, td {
 		margin-top: 30px;
 	}
 	.tax-download_category.list-view .content-area,
-	.tax-download_tag.list-view .content-area {
+	.tax-download_tag.list-view .content-area,
+	.post-type-archive-download .content-area {
 		padding: 48px 0 0;
 	}
 }

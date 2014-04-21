@@ -4,9 +4,9 @@
  */
 function tfedd_widgets_init() {	
 	register_sidebar( array(
-		'name'          => __( 'EDD Sidebar', 'twentyfourteen' ),
+		'name'          => __( 'EDD Sidebar', 'tfedd' ),
 		'id'            => 'sidebar-edd',
-		'description'   => __( 'Additional sidebar that appears on the right of the content on single download pages.', 'twentyfourteen' ),
+		'description'   => __( 'Additional sidebar that appears on the right of the content on single download pages.', 'tfedd' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h1 class="widget-title">',

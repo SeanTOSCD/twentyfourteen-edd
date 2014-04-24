@@ -31,7 +31,10 @@ function tfedd_customize_register( $wp_customize ) {
 			'priority'   	=> 60,
 		) );
 		// store front/downloads archive headline
-		$wp_customize->add_setting( 'tfedd_edd_store_archives_title', array( 'default' => null ) );
+		$wp_customize->add_setting( 'tfedd_edd_store_archives_title', array( 
+			'default' => null,
+			'sanitize_callback' => 'tfedd_edd_sanitize_text' 
+		) );
 		$wp_customize->add_control( 'tfedd_edd_store_archives_title', array(
 			'label'		=> __( 'Store/Download Archives Main Title', 'tfedd' ),
 			'section'	=> 'tfedd_edd_options',
@@ -47,7 +50,10 @@ function tfedd_customize_register( $wp_customize ) {
 			'priority'	=> 20,
 		) ) );
 		// read more link
-		$wp_customize->add_setting( 'tfedd_product_view_details', array( 'default' => __( 'View Details', 'tfedd' ) ) );	
+		$wp_customize->add_setting( 'tfedd_product_view_details', array( 
+			'default' => __( 'View Details', 'tfedd' ),
+			'sanitize_callback' => 'tfedd_edd_sanitize_text' 
+		) );	
 		$wp_customize->add_control( 'tfedd_product_view_details', array(
 		    'label' 	=> __( 'Store Item Link Text', 'tfedd' ),
 		    'section' 	=> 'tfedd_edd_options',
@@ -63,7 +69,10 @@ function tfedd_customize_register( $wp_customize ) {
 			'priority'	=> 40,
 		) );
 		// show comments on downloads?
-		$wp_customize->add_setting( 'tfedd_download_comments', array( 'default' => 0 ) );
+		$wp_customize->add_setting( 'tfedd_download_comments', array( 
+			'default' => 0,
+			'sanitize_callback' => 'tfedd_edd_sanitize_checkbox'  
+		) );
 		$wp_customize->add_control( 'tfedd_download_comments', array(
 			'label'		=> __( 'Comments on Downloads?', 'tfedd' ),
 			'section'	=> 'tfedd_edd_options',
@@ -73,6 +82,24 @@ function tfedd_customize_register( $wp_customize ) {
 	}
 }
 add_action( 'customize_register', 'tfedd_customize_register' );
+
+/** ===============
+ * Sanitize checkbox options
+ */
+function tfedd_edd_sanitize_checkbox( $input ) {
+    if ( $input == 1 ) {
+        return 1;
+    } else {
+        return 0;
+    }
+}
+
+/** ===============
+ * Sanitize text input
+ */
+function tfedd_edd_sanitize_text( $input ) {
+    return strip_tags( stripslashes( $input ) );
+}
 
 /** ===============
  * Add Customizer UI styles to the <head> only on Customizer page
